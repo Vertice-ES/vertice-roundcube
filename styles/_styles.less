@@ -1,0 +1,425 @@
+/**
+ * Vértice Mail - Brand style overrides
+ *
+ * Refinamientos visuales sobre el tema Elastic con la identidad de Vértice Gestión Empresarial.
+ * Sin gradientes, colores planos. Toda la marca vive en las variables @br-*.
+ *
+ * Tema base: Elastic (c) The Roundcube Dev Team - Aleksander Machniak
+ * Personalización: (c) NextAura para Vértice Gestión Empresarial
+ */
+
+// Paleta Vértice Gestión Empresarial
+@br-primary: #05406c;
+@br-primary-hover: #0b5d95;
+@br-primary-active: #032f50;
+@br-primary-deep: #021c30;
+@br-primary-soft: #e2f0f9;
+@br-primary-soft-2: #f1f7fb;
+@br-on-primary: #ffffff;
+@br-accent: #3ca5d5;
+@br-menu-bg: #04345a;
+@br-menu-hover: #0a4d7f;
+@br-menu-text: #cfe0ec;
+@br-dark-bg: #08131c;
+@br-dark-surface: #0c1b26;
+@br-dark-header: #11222f;
+@br-dark-menu-bg: #050e15;
+@br-dark-hover: #10334d;
+@br-dark-selected: #10334d;
+@br-dark-primary: #3ca5d5;
+@br-dark-btn: #0a6baf;
+
+// =====================================================================
+// LOGIN
+// =====================================================================
+.task-login {
+  #layout-content {
+    background: #ffffff;
+  }
+  #logo {
+    max-width: 320px;
+    max-height: 110px;
+  }
+}
+
+html.dark-mode body.task-login,
+html.dark-mode .task-login #layout,
+html.dark-mode .task-login #layout-content {
+  background: @br-dark-bg !important;
+}
+html.dark-mode .task-login #logo {
+  content: url(../images/logo-dark.png);
+}
+
+#login-form .btn-primary {
+  width: 100%;
+  height: 2.8rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+// =====================================================================
+// BOTONES
+// =====================================================================
+.btn-primary,
+.formbuttons .btn-primary,
+.ui-dialog .ui-dialog-buttonpane .ui-dialog-buttonset button.mainaction {
+  background: @br-primary !important;
+  border-color: @br-primary-active !important;
+  color: @br-on-primary !important;
+  box-shadow: 0 2px 8px fadeout(@br-primary, 70%);
+  font-weight: 600;
+
+  &:hover,
+  &:focus {
+    background: @br-primary-hover !important;
+    border-color: @br-primary !important;
+    box-shadow: 0 4px 14px fadeout(@br-primary, 60%);
+  }
+
+  &:active,
+  &:not(:disabled):not(.disabled):active {
+    background: @br-primary-active !important;
+    border-color: @br-primary-deep !important;
+  }
+}
+
+a.button.icon.toolbar-button:not(.disabled):hover,
+.toolbar a.button:not(.disabled):hover {
+  color: @br-primary-active !important;
+  background-color: @br-primary-soft !important;
+}
+
+// =====================================================================
+// TASKMENU (barra lateral izquierda)
+// =====================================================================
+#taskmenu {
+  background: @br-menu-bg !important;
+  border-right: 1px solid fadeout(@br-accent, 85%);
+
+  a {
+    color: @br-menu-text !important;
+    transition:
+      background 0.15s ease,
+      color 0.15s ease,
+      box-shadow 0.15s ease;
+
+    &:hover {
+      background: @br-menu-hover !important;
+      color: #ffffff !important;
+    }
+
+    &.selected,
+    &.selected:hover {
+      background: @br-menu-hover !important;
+      color: #ffffff !important;
+      box-shadow: inset 3px 0 0 @br-accent;
+      &:before {
+        color: @br-accent;
+      }
+    }
+
+    &.logout {
+      color: #ff7b78 !important;
+    }
+  }
+
+  .special-buttons {
+    background: @br-menu-bg !important;
+    border-top: 1px solid fadeout(@br-accent, 90%);
+  }
+
+  .action-buttons a {
+    color: @br-accent !important;
+    &:hover {
+      color: #ffffff !important;
+      background: @br-menu-hover !important;
+    }
+  }
+}
+
+#layout-menu .popover-header {
+  background: @br-menu-bg;
+}
+
+// =====================================================================
+// SIDEBAR / LISTAS DE CARPETAS
+// =====================================================================
+#layout-sidebar {
+  background: @br-primary-soft-2 !important;
+}
+
+.folderlist li.mailbox.selected > a,
+.folderlist li.mailbox > a.selected,
+ul.treelist li.selected > a {
+  background: @br-primary-soft !important;
+  color: @br-primary-active !important;
+  font-weight: 600;
+  box-shadow: inset 3px 0 0 @br-primary;
+}
+
+.folderlist li.mailbox .unreadcount {
+  background: @br-primary !important;
+  color: @br-on-primary !important;
+  box-shadow: 0 1px 3px fadeout(@br-primary, 60%);
+}
+
+.folderlist li.mailbox.recent > a {
+  color: @br-primary-active !important;
+}
+
+// =====================================================================
+// LISTADOS (mensajes, contactos…)
+// =====================================================================
+.listing li.selected,
+.listing tr.selected td,
+.listing tbody tr.selected td {
+  background-color: @br-primary-soft-2 !important;
+  color: #10202c !important;
+  box-shadow: inset 3px 0 0 @br-primary;
+}
+
+html:not(.touch) .listing li:not(.selected):hover,
+html:not(.touch) .listing tbody tr:not(.selected):hover td {
+  background-color: fadeout(@br-primary-soft, 30%);
+}
+
+.listing .unread .subject {
+  color: @br-primary-active;
+}
+
+// =====================================================================
+// HEADERS
+// =====================================================================
+#layout > div > .header,
+#layout > div > .scroller {
+  background: #fff !important;
+  border-bottom: 1px solid fadeout(@br-primary, 85%);
+}
+
+// =====================================================================
+// FORMULARIOS
+// =====================================================================
+.form-control:focus,
+.tagedit-list[tabindex="-1"],
+.recipient-input:focus-within {
+  border-color: @br-primary !important;
+  box-shadow: 0 0 0 0.2rem fadeout(@br-primary, 75%) !important;
+}
+
+.custom-checkbox .custom-control-input:checked ~ .custom-control-label:before,
+.custom-radio .custom-control-input:checked ~ .custom-control-label:before {
+  background-color: @br-primary !important;
+  border-color: @br-primary !important;
+}
+
+// =====================================================================
+// SCROLLBARS
+// =====================================================================
+html {
+  scrollbar-color: @br-primary #f1f1f1;
+}
+html:not(.touch) ::-webkit-scrollbar-thumb {
+  background-color: @br-primary !important;
+  border-radius: 4px;
+}
+
+// =====================================================================
+// PÁGINA "ACERCA DE" y alerts informativas
+// =====================================================================
+.frame-content {
+  h2.sysname,
+  .copyright,
+  .license {
+    color: @br-primary-active;
+  }
+
+  a:not(.btn) {
+    color: @br-primary;
+    &:hover {
+      color: @br-primary-active;
+    }
+  }
+}
+
+.ui.alert.boxinformation,
+.ui.alert.alert-info {
+  background-color: fadeout(@br-primary, 88%) !important;
+  border-color: fadeout(@br-primary, 75%) !important;
+  color: #10202c;
+
+  > i.icon:before {
+    color: @br-primary-active !important;
+  }
+}
+
+#messagestack .alert-info,
+#messagestack .alert-info.information {
+  background-color: @br-primary !important;
+  color: @br-on-primary !important;
+}
+
+// =====================================================================
+// MODO OSCURO
+// =====================================================================
+html.dark-mode {
+  body,
+  #layout {
+    background-color: @br-dark-bg;
+  }
+
+  #layout-menu,
+  #layout-menu .popover-header,
+  #layout-menu .special-buttons {
+    background: @br-dark-menu-bg !important;
+  }
+
+  #layout-menu .special-buttons a:not(:focus) {
+    background: @br-dark-menu-bg;
+  }
+
+  #layout-sidebar,
+  #layout-list,
+  #layout-content {
+    background: @br-dark-surface !important;
+  }
+
+  #layout > div > .header {
+    background: @br-dark-header !important;
+    border-bottom: 1px solid fadeout(@br-dark-primary, 80%);
+  }
+
+  #taskmenu {
+    background: @br-dark-menu-bg !important;
+
+    a {
+      color: @br-menu-text !important;
+
+      &:hover,
+      &:focus {
+        background: @br-dark-hover !important;
+        color: #ffffff !important;
+      }
+
+      &.selected,
+      &.selected:hover {
+        background: @br-dark-selected !important;
+        color: #ffffff !important;
+        box-shadow: inset 3px 0 0 @br-accent;
+        &:before {
+          color: @br-accent;
+        }
+      }
+    }
+
+    .special-buttons {
+      background: @br-dark-menu-bg !important;
+    }
+  }
+
+  .listing li.selected,
+  .listing tr.selected td,
+  .listing tbody tr.selected td {
+    background-color: @br-dark-selected !important;
+    color: #ffffff !important;
+    box-shadow: inset 3px 0 0 @br-dark-primary;
+  }
+
+  .listing li:not(.selected):hover,
+  .listing tbody tr:not(.selected):hover td {
+    background-color: fadeout(@br-dark-primary, 88%) !important;
+    color: #ffffff !important;
+  }
+
+  .listing .unread .subject {
+    color: @br-dark-primary;
+  }
+
+  .folderlist li.mailbox:not(.selected) > a:hover,
+  ul.treelist li:not(.selected) > a:hover {
+    background-color: fadeout(@br-dark-primary, 88%) !important;
+    color: #ffffff !important;
+  }
+
+  .folderlist li.mailbox.selected > a,
+  ul.treelist li.selected > a {
+    background: fadeout(@br-dark-primary, 82%) !important;
+    color: @br-dark-primary !important;
+    box-shadow: inset 3px 0 0 @br-dark-primary;
+  }
+
+  .folderlist li.mailbox.recent > a {
+    color: @br-dark-primary !important;
+  }
+
+  .menu a:not(.disabled):focus,
+  .menu a:not(.disabled):hover,
+  .menu.toolbar .dropbutton:not(.disabled):hover {
+    background-color: fadeout(@br-dark-primary, 82%) !important;
+    color: #ffffff !important;
+  }
+
+  .popover .menu li a:not(.disabled):hover {
+    color: #ffffff !important;
+    background-color: @br-dark-btn !important;
+  }
+
+  a.button.icon.toolbar-button:not(.disabled):hover,
+  .toolbar a.button:not(.disabled):hover,
+  .header a.button.icon:not(.disabled):hover,
+  .header a.button.icon:not(.disabled):focus {
+    color: @br-dark-primary !important;
+    background-color: fadeout(@br-dark-primary, 82%) !important;
+  }
+
+  .btn-primary,
+  .formbuttons .btn-primary,
+  .ui-dialog .ui-dialog-buttonpane .ui-dialog-buttonset button.mainaction {
+    background: @br-dark-btn !important;
+    border-color: @br-dark-btn !important;
+    color: #ffffff !important;
+
+    &:hover,
+    &:focus {
+      background: lighten(@br-dark-btn, 6%) !important;
+      border-color: @br-dark-primary !important;
+    }
+  }
+
+  .btn-secondary:hover,
+  .btn-secondary:focus {
+    background: @br-dark-selected !important;
+    border-color: @br-dark-primary !important;
+    color: #ffffff !important;
+  }
+
+  .form-control:focus,
+  .recipient-input:focus-within {
+    border-color: @br-dark-primary !important;
+    box-shadow: 0 0 0 0.2rem fadeout(@br-dark-primary, 75%) !important;
+  }
+
+  .frame-content a:not(.btn) {
+    color: @br-dark-primary;
+    &:hover {
+      color: lighten(@br-dark-primary, 10%);
+    }
+  }
+
+  .ui.alert.boxinformation,
+  .ui.alert.alert-info {
+    background-color: fadeout(@br-dark-primary, 82%) !important;
+    color: #ffffff !important;
+
+    > i.icon:before {
+      color: @br-dark-primary !important;
+    }
+  }
+}
+
+html.dark-mode {
+  scrollbar-color: @br-dark-btn @br-dark-surface;
+}
+html.dark-mode:not(.touch) ::-webkit-scrollbar-thumb {
+  background-color: @br-dark-btn !important;
+}

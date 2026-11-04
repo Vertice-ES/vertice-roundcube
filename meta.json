@@ -1,0 +1,40 @@
+{
+    "name": "Vértice Mail",
+    "author": "NextAura para Vértice Gestión Empresarial (skin basado en \"Elastic\" de Aleksander Machniak)",
+    "url": "https://github.com/TheIsmael12/vertice-roundcube",
+    "license": "Creative Commons Attribution-ShareAlike",
+    "license-url": "http://creativecommons.org/licenses/by-sa/3.0/",
+    "extends": "elastic",
+    "config": {
+        "supported_layouts": [
+            "widescreen"
+        ],
+        "jquery_ui_colors_theme": "bootstrap",
+        "embed_css_location": "/styles/embed.css",
+        "editor_css_location": "/styles/embed.css",
+        "dark_mode_support": true,
+        "media_browser_css_location": "none",
+        "additional_logo_types": [
+            "dark",
+            "small",
+            "small-dark"
+        ],
+        "skin_logo": {
+            "login": "/images/logo.png",
+            "login[dark]": "/images/logo-dark.png",
+            "login[small]": "/images/logo.png",
+            "login[small-dark]": "/images/logo-dark.png",
+            "*": "/images/logo-small-dark.png",
+            "*[dark]": "/images/logo-small-dark.png",
+            "*[small]": "/images/logo-small-dark.png",
+            "*[small-dark]": "/images/logo-small-dark.png",
+            "*[print]": "/images/logo.png",
+            "favicon": "/images/favicon.ico"
+        }
+    },
+    "meta": {
+        "viewport": "width=device-width, initial-scale=1.0, shrink-to-fit=no, maximum-scale=1.0",
+        "theme-color": "#05406c",
+        "msapplication-navbutton-color": "#05406c"
+    }
+}

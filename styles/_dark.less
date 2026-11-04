@@ -1,0 +1,22 @@
+/**
+ * Ajustes de marca para el modo oscuro (se importa dentro de html.dark-mode).
+ */
+
+.task-login #logo {
+    content: url(../images/logo-dark.png);
+    opacity: 1;
+}
+
+#layout > div > .scroller {
+    background-color: transparent !important;
+    border-color: @color-dark-border;
+}
+
+#layout > div > .header,
+#layout > div > .scroller {
+    color: #fff;
+
+    a.button {
+        color: @color-dark-font;
+    }
+}

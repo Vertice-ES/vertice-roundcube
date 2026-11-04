@@ -1,0 +1,15 @@
+{
+    "name": "theismael12/vertice",
+    "type": "roundcube-skin",
+    "description": "Vértice Mail: skin de Roundcube basado en Elastic",
+    "homepage": "https://github.com/TheIsmael12/vertice-roundcube",
+    "license": "CC-BY-SA-3.0",
+    "require": {
+        "roundcube/plugin-installer": ">=0.3.0"
+    },
+    "extra": {
+        "roundcube": {
+            "min-version": "1.7.0"
+        }
+    }
+}

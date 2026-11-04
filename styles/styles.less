@@ -1,0 +1,21 @@
+/**
+ * Vértice Mail · hoja de estilos principal
+ *
+ * Hereda el skin Elastic de la instalación de Roundcube (../../elastic) y le
+ * aplica la paleta y los ajustes de marca. Compilar con `npm run build`.
+ *
+ * Tema base: Elastic (c) The Roundcube Dev Team - Aleksander Machniak (CC BY-SA 3.0)
+ */
+
+// Elastic completo (layout, widgets, modo oscuro…)
+@import "../../elastic/styles/styles.less";
+
+// Paleta de marca: en LESS gana la última definición de cada variable
+@import "colors.less";
+
+// Ajustes de marca
+@import "_styles.less";
+
+html.dark-mode {
+    @import (multiple) "_dark.less";
+}

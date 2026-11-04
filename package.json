@@ -1,0 +1,19 @@
+{
+  "name": "vertice-roundcube",
+  "private": true,
+  "description": "Vértice Mail · skin de Roundcube que hereda de Elastic",
+  "license": "CC-BY-SA-3.0",
+  "type": "module",
+  "roundcube": {
+    "skin": "vertice",
+    "version": "1.7.5"
+  },
+  "scripts": {
+    "build": "node bin/build.mjs",
+    "check": "node bin/build.mjs --check"
+  },
+  "devDependencies": {
+    "clean-css": "5.3.3",
+    "less": "4.2.2"
+  }
+}
