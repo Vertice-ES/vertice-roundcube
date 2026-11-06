@@ -10,6 +10,7 @@ Modo oscuro nativo, paleta de marca y logos propios, listo para producción.
 [![License: CC BY-SA 3.0](https://img.shields.io/badge/License-CC%20BY--SA%203.0-05406c?style=flat-square)](http://creativecommons.org/licenses/by-sa/3.0/)
 [![Roundcube](https://img.shields.io/badge/Roundcube-1.7.5-032f50?style=flat-square)](https://roundcube.net/)
 [![Based on Elastic](https://img.shields.io/badge/Based%20on-Elastic%20Skin-3ca5d5?style=flat-square)](https://github.com/roundcube/roundcubemail/tree/master/skins/elastic)
+![Visitas](https://visitor-badge.laobi.icu/badge?page_id=Vertice-ES.vertice-roundcube&left_text=visitas&right_color=%2305406c)
 
 </div>
 
